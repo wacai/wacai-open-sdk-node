@@ -1,0 +1,22 @@
+{
+  "name": "sdk-node.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "koa": "^2.5.1",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node demo/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
