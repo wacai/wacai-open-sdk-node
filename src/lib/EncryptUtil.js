@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 /**
- * 签名工具类
+ * 加密签名工具类
  */
 class EncryptUtil {
     /**

@@ -1,23 +1,22 @@
 const Router = require('koa-router')
 const router = new Router()
-const tokenService = require('../src/token/TokenService')
 const apiClient = require('../src/api/ApiClient')
 
-router.get('/api/token', async ctx => {
-	// token获取
-	let api = new tokenService();
-	let token = await api.get();
-
-    // API方法调用
+// API方法调用
+router.get('/api/demo', async ctx => {
+	// api方法名称
 	let api_name = 'api.test.post.fixed';
+    // api方法版本
 	let api_version = '1.0';
+    // 请求报文(json格式)
 	let json_data = '{"uid":123,"name":"zy"}';
+    // api 初始化
 	let api_client = new apiClient(api_name,api_version);
+    // api调用
 	let result = await api_client.http_post_json(json_data);
 	
 	ctx.body={
-		label: 'Current token:',
-		token: token,
+		label: 'Demo return:',
         result: result
 	}
 })
